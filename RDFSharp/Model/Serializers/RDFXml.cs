@@ -723,8 +723,8 @@ namespace RDFSharp.Model
                                 && attr.Name.ToUpperInvariant() != "XML:BASE")
                     {
 
-                        //Try to resolve the current namespace against the namespace register;
-                        //if not resolved, create new namespace with scope limited to actual node
+                        // Try to resolve the current namespace against the namespace register,
+                        // if not resolved, create new namespace with scope limited to actual node
                         RDFNamespace ns =
                         (RDFNamespaceRegister.GetByPrefix(attr.LocalName) ??
                                 RDFNamespaceRegister.GetByUri(attr.Value) ??
