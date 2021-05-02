@@ -132,7 +132,25 @@ namespace RDFSharp.UnitTest
         private void SerializeRDFGraph(RDFGraph graph, RDFModelEnums.RDFFormats rdfFormat)
         {
             DirectoryInfo directory = Directory.CreateDirectory("output");
-            graph.ToFile(rdfFormat, "output/graph.txt");
+            string filepath = "output/";
+
+            switch (rdfFormat)
+            {
+                case RDFModelEnums.RDFFormats.Turtle:
+                    filepath += "turtle.txt";
+                    break;
+                case RDFModelEnums.RDFFormats.RdfXml:
+                    filepath += "rdfxml.txt";
+                    break;
+                case RDFModelEnums.RDFFormats.NTriples:
+                    filepath += "ntriples.txt";
+                    break;
+                case RDFModelEnums.RDFFormats.TriX:
+                    filepath += "trix.txt";
+                    break;
+            }
+
+            graph.ToFile(rdfFormat, filepath);
         }
 
         private RDFGraph DeserializeRDFGraph(RDFModelEnums.RDFFormats rdfFormat)
@@ -142,13 +160,13 @@ namespace RDFSharp.UnitTest
                 switch (rdfFormat)
                 {
                     case RDFModelEnums.RDFFormats.Turtle:
-                        return RDFGraph.FromFile(RDFModelEnums.RDFFormats.Turtle, "output/graph.txt");
+                        return RDFGraph.FromFile(RDFModelEnums.RDFFormats.Turtle, "output/turtle.txt");
                     case RDFModelEnums.RDFFormats.RdfXml:
-                        return RDFGraph.FromFile(RDFModelEnums.RDFFormats.RdfXml, "output/graph.txt");
+                        return RDFGraph.FromFile(RDFModelEnums.RDFFormats.RdfXml, "output/rdfxml.txt");
                     case RDFModelEnums.RDFFormats.NTriples:
-                        return RDFGraph.FromFile(RDFModelEnums.RDFFormats.NTriples, "output/graph.txt");
+                        return RDFGraph.FromFile(RDFModelEnums.RDFFormats.NTriples, "output/ntriples.txt");
                     case RDFModelEnums.RDFFormats.TriX:
-                        return RDFGraph.FromFile(RDFModelEnums.RDFFormats.TriX, "output/graph.txt");
+                        return RDFGraph.FromFile(RDFModelEnums.RDFFormats.TriX, "output/trix.txt");
                     default:
                         return null;
                 }
