@@ -1,0 +1,42 @@
+﻿@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@base <https://rdfsharp.codeplex.com/>.
+
+rdf:subject_0 a rdf:object_0. 
+
+rdf:subject_1 a rdf:object_1. 
+
+rdf:subject_10 a rdf:object_0. 
+
+rdf:subject_11 a rdf:object_1. 
+
+rdf:subject_12 a rdf:object_2. 
+
+rdf:subject_13 a rdf:object_3. 
+
+rdf:subject_14 a rdf:object_4. 
+
+rdf:subject_15 a rdf:object_5. 
+
+rdf:subject_16 a rdf:object_6. 
+
+rdf:subject_17 a rdf:object_7. 
+
+rdf:subject_18 a rdf:object_8. 
+
+rdf:subject_19 a rdf:object_9. 
+
+rdf:subject_2 a rdf:object_2. 
+
+rdf:subject_3 a rdf:object_3. 
+
+rdf:subject_4 a rdf:object_4. 
+
+rdf:subject_5 a rdf:object_5. 
+
+rdf:subject_6 a rdf:object_6. 
+
+rdf:subject_7 a rdf:object_7. 
+
+rdf:subject_8 a rdf:object_8. 
+
+rdf:subject_9 a rdf:object_9. 

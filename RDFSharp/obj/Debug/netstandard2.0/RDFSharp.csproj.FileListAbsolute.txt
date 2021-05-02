@@ -1,0 +1,11 @@
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.xml
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.deps.json
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.dll
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.pdb
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.csprojAssemblyReference.cache
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.AssemblyInfoInputs.cache
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.AssemblyInfo.cs
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.csproj.CoreCompileInputs.cache
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.sourcelink.json
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.dll
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.pdb
