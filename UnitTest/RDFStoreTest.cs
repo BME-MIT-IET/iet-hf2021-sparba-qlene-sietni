@@ -30,6 +30,7 @@ namespace RDFSharp.UnitTest
             }
             catch (Exception e) {
                 Assert.IsNotNull(null);
+                Console.WriteLine(e);
             }
         }
 
@@ -53,11 +54,11 @@ namespace RDFSharp.UnitTest
 
             wdStore.AddQuadruple(mickeymouse);
 
-            Assert.AreEqual(wdStore.QuadruplesCount, 1);
+            Assert.AreEqual(1, wdStore.QuadruplesCount);
 
             wdStore.AddQuadruple(donalduck);
 
-            Assert.AreEqual(wdStore.QuadruplesCount, 2);
+            Assert.AreEqual(2, wdStore.QuadruplesCount);
         }
 
         [TestMethod]
@@ -85,7 +86,7 @@ namespace RDFSharp.UnitTest
             wdStore.RemoveQuadruple(mickeymouse);
             wdStore.RemoveQuadruple(donalduck);
 
-            Assert.AreEqual(wdStore.QuadruplesCount, 0);
+            Assert.AreEqual(0, wdStore.QuadruplesCount);
         }
 
         [TestMethod]
@@ -112,7 +113,7 @@ namespace RDFSharp.UnitTest
 
             var found_by_subject = wdStore.SelectQuadruplesBySubject(new RDFResource("http://www.waltdisney.com/mickey_mouse"));
 
-            Assert.AreEqual(found_by_subject.QuadruplesCount, 1);
+            Assert.AreEqual(1, found_by_subject.QuadruplesCount);
         }
 
         [TestMethod]
@@ -140,8 +141,8 @@ namespace RDFSharp.UnitTest
             var found_by_predicate_age = wdStore.SelectQuadruplesByPredicate(RDFVocabulary.FOAF.AGE);
             var found_by_predicate_name = wdStore.SelectQuadruplesByPredicate(RDFVocabulary.FOAF.NAME);
 
-            Assert.AreEqual(found_by_predicate_age.QuadruplesCount, 1);
-            Assert.AreEqual(found_by_predicate_name.QuadruplesCount, 1);
+            Assert.AreEqual(1, found_by_predicate_age.QuadruplesCount);
+            Assert.AreEqual(1, found_by_predicate_name.QuadruplesCount);
         }
 
         [TestMethod]
@@ -169,8 +170,8 @@ namespace RDFSharp.UnitTest
             var found_by_literal = wdStore.SelectQuadruplesByLiteral(new RDFPlainLiteral("Donald Duck", "en"));
             var found_by_literal_wrong = wdStore.SelectQuadruplesByLiteral(new RDFPlainLiteral("Donald Luck"));
 
-            Assert.AreEqual(found_by_literal.QuadruplesCount, 1);
-            Assert.AreEqual(found_by_literal_wrong.QuadruplesCount, 0);
+            Assert.AreEqual(1, found_by_literal.QuadruplesCount);
+            Assert.AreEqual(0, found_by_literal_wrong.QuadruplesCount);
         }
     }
 }
