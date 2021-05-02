@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Marco De Salvo")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Lightweight and friendly .NET library for modeling Semantic Web applications")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.23.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.23.0+3502fcd75c16670382121d5fbc304bd9f702e856")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.23.0+e1bbb900f115755aabc6267a4cf8a193f9ea44a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("RDFSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RDFSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.23.0.0")]
