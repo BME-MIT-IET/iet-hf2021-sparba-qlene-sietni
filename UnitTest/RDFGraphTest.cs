@@ -13,8 +13,8 @@ namespace RDFSharp.UnitTest
         [TestMethod]
         public void TestGraphBuilding()
         {
-            List<RDFResource> objects = this.BuildExampleObjectList(20);
-            RDFGraph graph = this.BuildExampleGraph(objects, 100);
+            List<RDFResource> objects = BuildExampleObjectList(20);
+            RDFGraph graph = BuildExampleGraph(objects, 100);
 
             Assert.AreEqual(100, graph.TriplesCount);
         }
@@ -22,8 +22,8 @@ namespace RDFSharp.UnitTest
         [TestMethod]
         public void TestClearTriples()
         {
-            List<RDFResource> objects = this.BuildExampleObjectList(20);
-            RDFGraph graph = this.BuildExampleGraph(objects, 100);
+            List<RDFResource> objects = BuildExampleObjectList(20);
+            RDFGraph graph = BuildExampleGraph(objects, 100);
 
             Assert.AreEqual(100, graph.TriplesCount);
 
@@ -34,8 +34,8 @@ namespace RDFSharp.UnitTest
         [TestMethod]
         public void TestRemoveTriplesByObject()
         {
-            List<RDFResource> objects = this.BuildExampleObjectList(20);
-            RDFGraph graph = this.BuildExampleGraph(objects, 100);
+            List<RDFResource> objects = BuildExampleObjectList(20);
+            RDFGraph graph = BuildExampleGraph(objects, 100);
 
             RDFGraph select = graph.SelectTriplesByObject(objects[0]);
             Assert.AreEqual(5, select.TriplesCount);
@@ -48,22 +48,13 @@ namespace RDFSharp.UnitTest
         }
 
         [TestMethod]
-        public void TestRDFNTriplesSerialization()
-        {
-            List<RDFResource> objects = this.BuildExampleObjectList(100);
-            RDFGraph graph = this.BuildExampleGraph(objects, 500);
-
-
-        }
-
-        [TestMethod]
         public void TestSerializeTurtle()
         {
-            List<RDFResource> objects = this.BuildExampleObjectList(10);
-            RDFGraph graph = this.BuildExampleGraph(objects, 20);
+            List<RDFResource> objects = BuildExampleObjectList(10);
+            RDFGraph graph = BuildExampleGraph(objects, 20);
 
-            this.SerializeRDFGraph(graph, RDFModelEnums.RDFFormats.Turtle);
-            RDFGraph deserializedGraph = this.DeserializeRDFGraph(RDFModelEnums.RDFFormats.Turtle);
+            SerializeRDFGraph(graph, RDFModelEnums.RDFFormats.Turtle);
+            RDFGraph deserializedGraph = DeserializeRDFGraph(RDFModelEnums.RDFFormats.Turtle);
 
             Assert.AreEqual(graph.TriplesCount, deserializedGraph.TriplesCount);
         }
@@ -71,11 +62,11 @@ namespace RDFSharp.UnitTest
         [TestMethod]
         public void TestSerializeRdfXml()
         {
-            List<RDFResource> objects = this.BuildExampleObjectList(10);
-            RDFGraph graph = this.BuildExampleGraph(objects, 20);
+            List<RDFResource> objects = BuildExampleObjectList(10);
+            RDFGraph graph = BuildExampleGraph(objects, 20);
 
-            this.SerializeRDFGraph(graph, RDFModelEnums.RDFFormats.RdfXml);
-            RDFGraph deserializedGraph = this.DeserializeRDFGraph(RDFModelEnums.RDFFormats.RdfXml);
+            SerializeRDFGraph(graph, RDFModelEnums.RDFFormats.RdfXml);
+            RDFGraph deserializedGraph = DeserializeRDFGraph(RDFModelEnums.RDFFormats.RdfXml);
 
             Assert.AreEqual(graph.TriplesCount, deserializedGraph.TriplesCount);
         }
@@ -83,11 +74,11 @@ namespace RDFSharp.UnitTest
         [TestMethod]
         public void TestSerializeNTriples()
         {
-            List<RDFResource> objects = this.BuildExampleObjectList(10);
-            RDFGraph graph = this.BuildExampleGraph(objects, 20);
+            List<RDFResource> objects = BuildExampleObjectList(10);
+            RDFGraph graph = BuildExampleGraph(objects, 20);
 
-            this.SerializeRDFGraph(graph, RDFModelEnums.RDFFormats.NTriples);
-            RDFGraph deserializedGraph = this.DeserializeRDFGraph(RDFModelEnums.RDFFormats.NTriples);
+            SerializeRDFGraph(graph, RDFModelEnums.RDFFormats.NTriples);
+            RDFGraph deserializedGraph = DeserializeRDFGraph(RDFModelEnums.RDFFormats.NTriples);
 
             Assert.AreEqual(graph.TriplesCount, deserializedGraph.TriplesCount);
         }
@@ -95,16 +86,16 @@ namespace RDFSharp.UnitTest
         [TestMethod]
         public void TestSerializeTriX()
         {
-            List<RDFResource> objects = this.BuildExampleObjectList(10);
-            RDFGraph graph = this.BuildExampleGraph(objects, 20);
+            List<RDFResource> objects = BuildExampleObjectList(10);
+            RDFGraph graph = BuildExampleGraph(objects, 20);
 
-            this.SerializeRDFGraph(graph, RDFModelEnums.RDFFormats.TriX);
-            RDFGraph deserializedGraph = this.DeserializeRDFGraph(RDFModelEnums.RDFFormats.TriX);
+            SerializeRDFGraph(graph, RDFModelEnums.RDFFormats.TriX);
+            RDFGraph deserializedGraph = DeserializeRDFGraph(RDFModelEnums.RDFFormats.TriX);
 
             Assert.AreEqual(graph.TriplesCount, deserializedGraph.TriplesCount);
         }
 
-        private List<RDFResource> BuildExampleObjectList(int count)
+        private static List<RDFResource> BuildExampleObjectList(int count)
         {
             List<RDFResource> objects = new List<RDFResource>();
 
@@ -116,7 +107,7 @@ namespace RDFSharp.UnitTest
             return objects;
         }
 
-        private RDFGraph BuildExampleGraph(List<RDFResource> objects, int count)
+        private static RDFGraph BuildExampleGraph(List<RDFResource> objects, int count)
         {
             RDFGraph graph = new RDFGraph();
 
@@ -129,7 +120,7 @@ namespace RDFSharp.UnitTest
             return graph;
         }
 
-        private void SerializeRDFGraph(RDFGraph graph, RDFModelEnums.RDFFormats rdfFormat)
+        private static void SerializeRDFGraph(RDFGraph graph, RDFModelEnums.RDFFormats rdfFormat)
         {
             DirectoryInfo directory = Directory.CreateDirectory("output");
             string filepath = "output/";
@@ -153,7 +144,7 @@ namespace RDFSharp.UnitTest
             graph.ToFile(rdfFormat, filepath);
         }
 
-        private RDFGraph DeserializeRDFGraph(RDFModelEnums.RDFFormats rdfFormat)
+        private static RDFGraph DeserializeRDFGraph(RDFModelEnums.RDFFormats rdfFormat)
         {
             try
             {
