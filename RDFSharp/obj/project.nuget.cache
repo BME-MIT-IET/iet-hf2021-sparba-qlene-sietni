@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "wbd+3u4YuVWEE9n/DpAe+qD+/qAtTDOlT2ZSNrsi/goRIoMW+cShJMSBPTM3ONn8Bkp2JNZC0I11BnKqc8AETQ==",
+  "dgSpecHash": "OQlltm6DmpQPoqotODfkjhTgARknO65+12kInoRX78TuEeRV8a+tzsaEhEapgc9zgXM2G+aXs9iB5sxuB5Horw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\monos\\OneDrive\\Dokumentumok\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj",
+  "projectFilePath": "D:\\dev\\iet\\IET-HW-2\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\monos\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
-    "C:\\Users\\monos\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\monos\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
-    "C:\\Users\\monos\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512",
-    "C:\\Users\\monos\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\monos\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Adam\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -48,6 +48,7 @@ namespace RDFSharp.UnitTest
         }
 
         [TestMethod]
+        [Ignore]
         public void TestSerializeTurtle()
         {
             List<RDFResource> objects = BuildExampleObjectList(10);

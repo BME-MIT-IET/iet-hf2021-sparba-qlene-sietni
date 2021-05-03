@@ -2,10 +2,17 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "coverlet.collector/1.3.0": {
+      "coverlet.collector/3.0.3": {
         "type": "package",
         "build": {
           "build/netstandard1.0/coverlet.collector.targets": {}
+        }
+      },
+      "coverlet.msbuild/3.0.3": {
+        "type": "package",
+        "build": {
+          "build/coverlet.msbuild.props": {},
+          "build/coverlet.msbuild.targets": {}
         }
       },
       "Microsoft.CodeCoverage/16.9.4": {
@@ -1686,13 +1693,14 @@
     }
   },
   "libraries": {
-    "coverlet.collector/1.3.0": {
-      "sha512": "t8pnf5SX2ya0RX4vjoxsbhDMQCZJcpPun2neHKJ4FouMmObylo25FvoOydvf3Bl+l+IzWw7u2vjEeCBHnleB9g==",
+    "coverlet.collector/3.0.3": {
+      "sha512": "PdyhdzG2LK7YUEtccObPql+3OuFODaFNeYayxdPoK1eHb2StZoeQf1WMb16QrKiIdi4fs5Kog8jxXtlZOgAEuA==",
       "type": "package",
-      "path": "coverlet.collector/1.3.0",
+      "path": "coverlet.collector/3.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "build/netstandard1.0/Microsoft.CSharp.dll",
         "build/netstandard1.0/Microsoft.DotNet.PlatformAbstractions.dll",
         "build/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "build/netstandard1.0/Microsoft.Extensions.DependencyInjection.dll",
@@ -1707,6 +1715,24 @@
         "build/netstandard1.0/Mono.Cecil.dll",
         "build/netstandard1.0/Newtonsoft.Json.dll",
         "build/netstandard1.0/NuGet.Frameworks.dll",
+        "build/netstandard1.0/System.AppContext.dll",
+        "build/netstandard1.0/System.Collections.Immutable.dll",
+        "build/netstandard1.0/System.Dynamic.Runtime.dll",
+        "build/netstandard1.0/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard1.0/System.Linq.Expressions.dll",
+        "build/netstandard1.0/System.Linq.dll",
+        "build/netstandard1.0/System.ObjectModel.dll",
+        "build/netstandard1.0/System.Reflection.Emit.ILGeneration.dll",
+        "build/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
+        "build/netstandard1.0/System.Reflection.Emit.dll",
+        "build/netstandard1.0/System.Reflection.Metadata.dll",
+        "build/netstandard1.0/System.Reflection.TypeExtensions.dll",
+        "build/netstandard1.0/System.Runtime.Serialization.Primitives.dll",
+        "build/netstandard1.0/System.Text.RegularExpressions.dll",
+        "build/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "build/netstandard1.0/System.Threading.dll",
+        "build/netstandard1.0/System.Xml.ReaderWriter.dll",
+        "build/netstandard1.0/System.Xml.XDocument.dll",
         "build/netstandard1.0/coverlet.collector.deps.json",
         "build/netstandard1.0/coverlet.collector.dll",
         "build/netstandard1.0/coverlet.collector.pdb",
@@ -1714,8 +1740,67 @@
         "build/netstandard1.0/coverlet.core.dll",
         "build/netstandard1.0/coverlet.core.pdb",
         "coverlet-icon.png",
-        "coverlet.collector.1.3.0.nupkg.sha512",
+        "coverlet.collector.3.0.3.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "coverlet.msbuild/3.0.3": {
+      "sha512": "fzxcn4+TZEfNEPP96mzmGWnKARCVKkEdBfhor8oTVhQWtxwZz9NuxuJxK7A2j7X20Rr8BSIK8qGclIJgTW7lsg==",
+      "type": "package",
+      "path": "coverlet.msbuild/3.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.Build.Framework.dll",
+        "build/Microsoft.Build.Utilities.Core.dll",
+        "build/Microsoft.CSharp.dll",
+        "build/Microsoft.DotNet.PlatformAbstractions.dll",
+        "build/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "build/Microsoft.Extensions.DependencyInjection.dll",
+        "build/Microsoft.Extensions.DependencyModel.dll",
+        "build/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "build/Mono.Cecil.Mdb.dll",
+        "build/Mono.Cecil.Pdb.dll",
+        "build/Mono.Cecil.Rocks.dll",
+        "build/Mono.Cecil.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/System.AppContext.dll",
+        "build/System.Collections.Concurrent.dll",
+        "build/System.Collections.Immutable.dll",
+        "build/System.Collections.NonGeneric.dll",
+        "build/System.Dynamic.Runtime.dll",
+        "build/System.IO.FileSystem.Primitives.dll",
+        "build/System.Linq.Expressions.dll",
+        "build/System.Linq.dll",
+        "build/System.ObjectModel.dll",
+        "build/System.Private.DataContractSerialization.dll",
+        "build/System.Reflection.Emit.ILGeneration.dll",
+        "build/System.Reflection.Emit.Lightweight.dll",
+        "build/System.Reflection.Emit.dll",
+        "build/System.Reflection.Metadata.dll",
+        "build/System.Reflection.TypeExtensions.dll",
+        "build/System.Resources.Reader.dll",
+        "build/System.Runtime.Serialization.Primitives.dll",
+        "build/System.Runtime.Serialization.Xml.dll",
+        "build/System.Text.RegularExpressions.dll",
+        "build/System.Threading.Tasks.Extensions.dll",
+        "build/System.Threading.Tasks.Parallel.dll",
+        "build/System.Threading.Thread.dll",
+        "build/System.Threading.ThreadPool.dll",
+        "build/System.Threading.dll",
+        "build/System.Xml.ReaderWriter.dll",
+        "build/System.Xml.XDocument.dll",
+        "build/System.Xml.XmlDocument.dll",
+        "build/System.Xml.XmlSerializer.dll",
+        "build/coverlet.core.dll",
+        "build/coverlet.core.pdb",
+        "build/coverlet.msbuild.props",
+        "build/coverlet.msbuild.targets",
+        "build/coverlet.msbuild.tasks.dll",
+        "build/coverlet.msbuild.tasks.pdb",
+        "coverlet-icon.png",
+        "coverlet.msbuild.3.0.3.nupkg.sha512",
+        "coverlet.msbuild.nuspec"
       ]
     },
     "Microsoft.CodeCoverage/16.9.4": {
@@ -6029,29 +6114,32 @@
       "MSTest.TestFramework >= 2.2.3",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "RDFSharp >= 2.23.0",
-      "coverlet.collector >= 1.3.0"
+      "coverlet.collector >= 3.0.3",
+      "coverlet.msbuild >= 3.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\monos\\.nuget\\packages\\": {},
+    "C:\\Users\\Adam\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\monos\\OneDrive\\Dokumentumok\\GitHub\\iet-hf2021-sparba-qlene-sietni\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "D:\\dev\\iet\\IET-HW-2\\iet-hf2021-sparba-qlene-sietni\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "C:\\Users\\monos\\OneDrive\\Dokumentumok\\GitHub\\iet-hf2021-sparba-qlene-sietni\\UnitTest\\UnitTest.csproj",
-      "packagesPath": "C:\\Users\\monos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\monos\\OneDrive\\Dokumentumok\\GitHub\\iet-hf2021-sparba-qlene-sietni\\UnitTest\\obj\\",
+      "projectPath": "D:\\dev\\iet\\IET-HW-2\\iet-hf2021-sparba-qlene-sietni\\UnitTest\\UnitTest.csproj",
+      "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
+      "outputPath": "D:\\dev\\iet\\IET-HW-2\\iet-hf2021-sparba-qlene-sietni\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\monos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -6067,8 +6155,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\monos\\OneDrive\\Dokumentumok\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj": {
-              "projectPath": "C:\\Users\\monos\\OneDrive\\Dokumentumok\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj"
+            "D:\\dev\\iet\\IET-HW-2\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj": {
+              "projectPath": "D:\\dev\\iet\\IET-HW-2\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj"
             }
           }
         }
@@ -6096,8 +6184,16 @@
             "version": "[16.9.4, )"
           },
           "coverlet.collector": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[1.3.0, )"
+            "version": "[3.0.3, )"
+          },
+          "coverlet.msbuild": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.0.3, )"
           }
         },
         "imports": [

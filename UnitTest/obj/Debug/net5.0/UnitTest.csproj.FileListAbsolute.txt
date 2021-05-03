@@ -200,3 +200,4 @@ C:\Users\monos\OneDrive\Dokumentumok\GitHub\iet-hf2021-sparba-qlene-sietni\UnitT
 C:\Users\monos\OneDrive\Dokumentumok\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\obj\Debug\net5.0\ref\UnitTest.dll
 C:\Users\monos\OneDrive\Dokumentumok\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\obj\Debug\net5.0\UnitTest.pdb
 C:\Users\monos\OneDrive\Dokumentumok\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\obj\Debug\net5.0\UnitTest.genruntimeconfig.cache
+D:\dev\iet\IET-HW-2\iet-hf2021-sparba-qlene-sietni\UnitTest\bin\Debug\net5.0\CoverletSourceRootsMapping
