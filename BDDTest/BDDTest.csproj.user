@@ -5,5 +5,8 @@
     <Compile Update="Steps\CreatePatternSteps.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Steps\OrderAndLimitModifierSteps.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
