@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "84WIfMvDpVxecHNMot4vsn+stIhEC28v29ahF6Cp888EgCLjRQg9q2Pa+su9sgQY4TlmfzLYyxMRmrYPShBO2Q==",
+  "dgSpecHash": "1PbHMsmwKJwx4cDA6/TkJ4TJ3380ABh2jD3xg9laoGka0gJhSOH4bqQi4S5DhPQdwjeZ2f1uswsz5Aiwto2f8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Balazs\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj",
+  "projectFilePath": "C:\\Users\\Benoero\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Balazs\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
-    "C:\\Users\\Balazs\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Balazs\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
-    "C:\\Users\\Balazs\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512",
-    "C:\\Users\\Balazs\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Balazs\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
-    "C:\\Users\\Balazs\\.nuget\\packages\\xunit.assert\\2.4.1\\xunit.assert.2.4.1.nupkg.sha512"
+    "C:\\Users\\Benoero\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Benoero\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
+    "C:\\Users\\Benoero\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Benoero\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\Benoero\\.nuget\\packages\\xunit.assert\\2.4.1\\xunit.assert.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }
