@@ -15,23 +15,26 @@ namespace BDDTest.Steps
         RDFSelectQuery query;
         RDFSelectQueryResult result;
         
-
+        // Create a graph and add triples
         [Given(@"create a graph with students and grades")]
         public void GivenCreateAGraphWithStudentsAndGrades()
         {
             graph = new RDFGraph();
+            // student1 with grades: 1, 2, 3, 4, 5
             var studentResource = new RDFResource(RDF.BASE_URI + "student1");
             for (int i = 1; i <= 5; i++)
             {
                 var gradeLiteral = new RDFTypedLiteral(i.ToString(), RDFModelEnums.RDFDatatypes.XSD_INTEGER);
                 graph.AddTriple(new RDFTriple(studentResource, RDF.VALUE, gradeLiteral));
             }
+            // student2 with grades: 2, 3, 4
             studentResource = new RDFResource(RDF.BASE_URI + "student2");
             for (int i = 2; i <= 4; i++)
             {
                 var gradeLiteral = new RDFTypedLiteral(i.ToString(), RDFModelEnums.RDFDatatypes.XSD_INTEGER);
                 graph.AddTriple(new RDFTriple(studentResource, RDF.VALUE, gradeLiteral));
             }
+            // student3 with grades: 3, 4, 5
             studentResource = new RDFResource(RDF.BASE_URI + "student3");
             for (int i = 3; i <= 5; i++)
             {
@@ -39,7 +42,8 @@ namespace BDDTest.Steps
                 graph.AddTriple(new RDFTriple(studentResource, RDF.VALUE, gradeLiteral));
             }
         }
-        
+
+        // Select query with a pattern
         [Given(@"write a select query to get students with grades")]
         public void GivenWriteASelectQueryToGetStudentsWithGrades()
         {
@@ -52,6 +56,7 @@ namespace BDDTest.Steps
             
         }
         
+        // Apply group by modifier and 5 aggregator so 5 new column will appear: average, count, max, min and sum
         [Given(@"add aggregators to query")]
         public void GivenAddAggregatorsToQuery()
         {
@@ -73,6 +78,7 @@ namespace BDDTest.Steps
             result = query.ApplyToGraph(graph);
         }
         
+        // Check if the results are correct
         [Then(@"we should get the average, count, maximum, minimum and sum of grades of students")]
         public void ThenWeShouldGetTheAverageCountMaximumMinimumAndSumOfGradesOfStudents()
         {
@@ -96,7 +102,7 @@ namespace BDDTest.Steps
             Assert.AreEqual(3, int.Parse(result.SelectResults.Rows[2].ItemArray[2].ToString().Split("^")[0]));
             Assert.AreEqual(5, int.Parse(result.SelectResults.Rows[2].ItemArray[3].ToString().Split("^")[0]));
             Assert.AreEqual(3, int.Parse(result.SelectResults.Rows[2].ItemArray[4].ToString().Split("^")[0]));
-            Assert.AreEqual(12, int.Parse(result.SelectResults.Rows[2].ItemArray[5].ToString().Split("^")[0]));
+            Assert.AreEqual(12,int.Parse(result.SelectResults.Rows[2].ItemArray[5].ToString().Split("^")[0]));
         }
     }
 }
