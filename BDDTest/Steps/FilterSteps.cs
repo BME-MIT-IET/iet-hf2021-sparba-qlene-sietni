@@ -12,7 +12,6 @@ namespace BDDTest.Steps
     [Binding]
     public sealed class FilterSteps
     {
-
         RDFGraph graph;
         RDFResource age = new RDFResource(RDFVocabulary.RDF.BASE_URI + "age");
         RDFSelectQuery query = new RDFSelectQuery();
@@ -26,7 +25,7 @@ namespace BDDTest.Steps
             RDFResource person = new RDFResource(RDFVocabulary.RDF.BASE_URI + "person");
             RDFTypedLiteral ageLiteral = new RDFTypedLiteral("old", RDFModelEnums.RDFDatatypes.XSD_STRING);
             graph.AddTriple(new RDFTriple(person, age, ageLiteral));
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 person = new RDFResource(RDFVocabulary.RDF.BASE_URI + "person" + i);
                 ageLiteral = new RDFTypedLiteral(new Random().Next(10, 41).ToString(), RDFModelEnums.RDFDatatypes.XSD_NONNEGATIVEINTEGER);
@@ -37,7 +36,7 @@ namespace BDDTest.Steps
 
         RDFVariable person;
         RDFVariable ageLiteral;
-       
+
         [Given(@"write a select query")]
         public void GivenWriteASelectQuery()
         {
@@ -45,13 +44,13 @@ namespace BDDTest.Steps
             person = new RDFVariable("person");
             ageLiteral = new RDFVariable("ageLiteral");
             patternGroup = new RDFPatternGroup("PatternGroup").AddPattern(new RDFPattern(person, age, ageLiteral));
-            
+
         }
 
         [Given(@"apply a filter so age >= ""(.*)""")]
         public void GivenApplyAFilterSoAge(int p0)
         {
-            patternGroup.AddFilter(new RDFComparisonFilter(RDFQueryEnums.RDFComparisonFlavors.GreaterOrEqualThan, ageLiteral, new RDFTypedLiteral(p0.ToString(),RDFModelEnums.RDFDatatypes.XSD_NONNEGATIVEINTEGER)));
+            patternGroup.AddFilter(new RDFComparisonFilter(RDFQueryEnums.RDFComparisonFlavors.GreaterOrEqualThan, ageLiteral, new RDFTypedLiteral(p0.ToString(), RDFModelEnums.RDFDatatypes.XSD_NONNEGATIVEINTEGER)));
         }
 
         [Given(@"age must be nonnegative integer")]
@@ -74,7 +73,8 @@ namespace BDDTest.Steps
             Assert.IsNotNull(graph);
             Assert.IsNotNull(query);
             Assert.IsNotNull(result);
-            for (int i = 0; i < result.SelectResultsCount; i++) {
+            for (int i = 0; i < result.SelectResultsCount; i++)
+            {
                 Assert.IsTrue(int.Parse(result.SelectResults.Rows[i].ItemArray[1].ToString().Split("^")[0]) >= 20);
             }
         }
