@@ -11,7 +11,8 @@
         "dependencies": {
           "Microsoft.SourceLink.GitHub": "1.0.0",
           "NETStandard.Library": "2.0.3",
-          "System.Data.DataSetExtensions": "4.5.0"
+          "System.Data.DataSetExtensions": "4.5.0",
+          "xunit.assert": "2.4.1"
         },
         "runtime": {
           "RDFSharp.dll": {}
@@ -36,6 +37,17 @@
           "lib/netstandard2.0/System.Data.DataSetExtensions.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "xunit.assert/2.4.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.assert.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
           }
         }
       }
@@ -88,6 +100,13 @@
       "sha512": "sha512-221clPs1445HkTBZPL+K9sDBdJRB8UN8rgjO3ztB0CQ26z//fmJXtlsr6whGatscsKGBrhJl5bwJuKSA8mwFOw==",
       "path": "system.data.datasetextensions/4.5.0",
       "hashPath": "system.data.datasetextensions.4.5.0.nupkg.sha512"
+    },
+    "xunit.assert/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O/Oe0BS5RmSsM+LQOb041TzuPo5MdH2Rov+qXGS37X+KFG1Hxz7kopYklM5+1Y+tRGeXrOx5+Xne1RuqLFQoyQ==",
+      "path": "xunit.assert/2.4.1",
+      "hashPath": "xunit.assert.2.4.1.nupkg.sha512"
     }
   }
 }
