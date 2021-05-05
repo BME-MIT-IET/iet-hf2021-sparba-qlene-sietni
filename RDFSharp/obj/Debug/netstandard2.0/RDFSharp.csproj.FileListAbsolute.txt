@@ -31,3 +31,14 @@ C:\Users\Balazs\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Deb
 C:\Users\Balazs\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.deps.json
 C:\Users\Balazs\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.dll
 C:\Users\Balazs\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.pdb
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.xml
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.deps.json
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.dll
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Debug\netstandard2.0\RDFSharp.pdb
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.csprojAssemblyReference.cache
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.AssemblyInfoInputs.cache
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.AssemblyInfo.cs
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.csproj.CoreCompileInputs.cache
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.sourcelink.json
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.dll
+C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Debug\netstandard2.0\RDFSharp.pdb
