@@ -13,8 +13,8 @@ namespace BDDTest.Steps
     public sealed class FilterSteps
     {
         RDFGraph graph;
-        RDFResource agePred = new RDFResource(RDFVocabulary.RDF.BASE_URI + "age");
-        RDFSelectQuery query = new RDFSelectQuery();
+        readonly RDFResource agePred = new(RDFVocabulary.RDF.BASE_URI + "age");
+        RDFSelectQuery query = new();
         RDFPatternGroup patternGroup;
         RDFSelectQueryResult result;
 
@@ -22,14 +22,14 @@ namespace BDDTest.Steps
         public void GivenCreateAGraphWithNameAndAge()
         {
             graph = new RDFGraph();
-            RDFResource personResource = new RDFResource(RDFVocabulary.RDF.BASE_URI + "person");
-            RDFTypedLiteral ageLiteral = new RDFTypedLiteral("old", RDFModelEnums.RDFDatatypes.XSD_STRING);
+            var personResource = new RDFResource(RDFVocabulary.RDF.BASE_URI + "person");
+            var ageLiteral = new RDFTypedLiteral("old", RDFModelEnums.RDFDatatypes.XSD_STRING);
             graph.AddTriple(new RDFTriple(personResource, agePred, ageLiteral));
             for (int i = 0; i < 10; i++)
             {
                 personResource = new RDFResource(RDFVocabulary.RDF.BASE_URI + "person" + i);
                 ageLiteral = new RDFTypedLiteral(new Random().Next(10, 41).ToString(), RDFModelEnums.RDFDatatypes.XSD_NONNEGATIVEINTEGER);
-                RDFTriple triple = new RDFTriple(personResource, agePred, ageLiteral);
+                var triple = new RDFTriple(personResource, agePred, ageLiteral);
                 graph.AddTriple(triple);
             }
         }
@@ -43,7 +43,7 @@ namespace BDDTest.Steps
             query = new RDFSelectQuery();
             person = new RDFVariable("person");
             age = new RDFVariable("age");
-            patternGroup = new RDFPatternGroup("PatternGroup").AddPattern(new RDFPattern(person, age, age));
+            patternGroup = new RDFPatternGroup("PatternGroup").AddPattern(new RDFPattern(person, agePred, age));
 
         }
 
@@ -75,7 +75,7 @@ namespace BDDTest.Steps
             Assert.IsNotNull(result);
             for (int i = 0; i < result.SelectResultsCount; i++)
             {
-                Assert.IsTrue(int.Parse(result.SelectResults.Rows[i].ItemArray[1].ToString().Split("^")[0]) >= 20);
+                Assert.IsTrue(int.Parse(result.SelectResults.Rows[i].ItemArray[1].ToString().Split("^")[0]) >= p0);
             }
         }
 
