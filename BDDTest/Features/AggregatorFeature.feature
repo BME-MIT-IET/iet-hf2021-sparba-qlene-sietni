@@ -1,9 +1,10 @@
 ﻿Feature: AggregatorFeature
-	Simple calculator for adding two numbers
+	Using aggregators over group-by partitioned sparql results
 
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+@aggregator
+Scenario: Calculate average, count, maximum, minimum and sum of grades of students
+	Given create a graph with students and grades
+	And write a select query to get students with grades
+	And add aggregators to query
+	When the query is runned
+	Then we should get the average, count, maximum, minimum and sum of grades of students
