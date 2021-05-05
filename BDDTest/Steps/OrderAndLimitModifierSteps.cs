@@ -53,9 +53,9 @@ namespace BDDTest.Steps
             Assert.IsNotNull(query);
             Assert.IsNotNull(result);
             Assert.AreEqual(p0, result.SelectResultsCount);
-            for(int i = 1; i <= 5; i++)
+            for(int i = 1; i <= p0; i++)
 			{
-                Assert.AreEqual(200 - (5 * i), int.Parse(result.SelectResults.Rows[i - 1].ItemArray[1].ToString().Split("^")[0]));
+                Assert.AreEqual(200 - (p0 * i), int.Parse(result.SelectResults.Rows[i - 1].ItemArray[1].ToString().Split("^")[0]));
             }
         }
     }

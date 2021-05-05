@@ -40,8 +40,7 @@ namespace BDDTest.Steps
             }
         }
 
-        RDFVariable person;
-        RDFVariable age;
+        RDFVariable person, age;
 
         [Given(@"write a select query")]
         public void GivenWriteASelectQuery()
@@ -100,7 +99,5 @@ namespace BDDTest.Steps
             Assert.AreEqual("old", result.SelectResults.Rows[0].ItemArray[1].ToString().Split("^")[0]);
             Assert.AreEqual("old", result.SelectResults.Rows[1].ItemArray[1].ToString().Split("^")[0]);
         }
-
-
     }
 }

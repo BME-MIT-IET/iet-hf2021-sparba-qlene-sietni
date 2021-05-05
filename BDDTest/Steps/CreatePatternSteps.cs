@@ -11,9 +11,7 @@ namespace BDDTest.Features
 	[Binding]
 	public sealed class CreatePatternSteps
 	{
-        RDFVariable x;
-        RDFVariable y;
-        RDFVariable z;
+        RDFVariable x, y, z;
         RDFPattern pattern;
         [Given(@"create subject, predicate, object variables")]
         public void GivenCreateSubjectPredicateObjectVariables()
