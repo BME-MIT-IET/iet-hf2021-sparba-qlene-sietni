@@ -53,11 +53,10 @@ namespace BDDTest.Steps
             Assert.IsNotNull(query);
             Assert.IsNotNull(result);
             Assert.AreEqual(p0, result.SelectResultsCount);
-            Assert.AreEqual(195, int.Parse(result.SelectResults.Rows[0].ItemArray[1].ToString().Split("^")[0]));
-            Assert.AreEqual(190, int.Parse(result.SelectResults.Rows[1].ItemArray[1].ToString().Split("^")[0]));
-            Assert.AreEqual(185, int.Parse(result.SelectResults.Rows[2].ItemArray[1].ToString().Split("^")[0]));
-            Assert.AreEqual(180, int.Parse(result.SelectResults.Rows[3].ItemArray[1].ToString().Split("^")[0]));
-            Assert.AreEqual(175, int.Parse(result.SelectResults.Rows[4].ItemArray[1].ToString().Split("^")[0]));
+            for(int i = 1; i <= p0; i++)
+			{
+                Assert.AreEqual(200 - (p0 * i), int.Parse(result.SelectResults.Rows[i - 1].ItemArray[1].ToString().Split("^")[0]));
+            }
         }
     }
 }

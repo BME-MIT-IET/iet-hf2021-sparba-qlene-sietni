@@ -43,8 +43,7 @@ namespace BDDTest.Steps
             }
         }
 
-        RDFVariable person;
-        RDFVariable age;
+        RDFVariable person, age;
 
         // Select query with a pattern
         [Given(@"write a select query")]
@@ -109,7 +108,5 @@ namespace BDDTest.Steps
             Assert.AreEqual(p0, result.SelectResults.Rows[0].ItemArray[1].ToString().Split("^")[0]);
             Assert.AreEqual(p0, result.SelectResults.Rows[1].ItemArray[1].ToString().Split("^")[0]);
         }
-
-
     }
 }
