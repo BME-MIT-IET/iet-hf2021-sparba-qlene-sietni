@@ -7015,27 +7015,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Benoero\\.nuget\\packages\\": {},
+    "C:\\Users\\Balazs\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Benoero\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\BDDTest\\BDDTest.csproj",
+      "projectUniqueName": "C:\\Users\\Balazs\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\BDDTest\\BDDTest.csproj",
       "projectName": "BDDTest",
-      "projectPath": "C:\\Users\\Benoero\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\BDDTest\\BDDTest.csproj",
-      "packagesPath": "C:\\Users\\Benoero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Benoero\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\BDDTest\\obj\\",
+      "projectPath": "C:\\Users\\Balazs\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\BDDTest\\BDDTest.csproj",
+      "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Balazs\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\BDDTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Benoero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Balazs\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -7051,8 +7049,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Benoero\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj": {
-              "projectPath": "C:\\Users\\Benoero\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj"
+            "C:\\Users\\Balazs\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj": {
+              "projectPath": "C:\\Users\\Balazs\\Documents\\GitHub\\iet-hf2021-sparba-qlene-sietni\\RDFSharp\\RDFSharp.csproj"
             }
           }
         }
