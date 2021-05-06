@@ -421,3 +421,5 @@ C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\obj\De
 C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\obj\Debug\net5.0\ref\UnitTest.dll
 C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\obj\Debug\net5.0\UnitTest.pdb
 C:\Users\Benoero\Documents\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\obj\Debug\net5.0\UnitTest.genruntimeconfig.cache
+C:\Users\monos\OneDrive\Dokumentumok\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\bin\Debug\net5.0\CoverletSourceRootsMapping
+C:\Users\monos\OneDrive\Dokumentumok\GitHub\iet-hf2021-sparba-qlene-sietni\UnitTest\bin\Debug\net5.0\xunit.assert.dll
