@@ -90,6 +90,161 @@ namespace RDFSharp.UnitTest
         }
 
         [TestMethod]
+        public void TestRDFQuadrupleDeleteByContext()
+        {
+            var wd_context = new RDFContext("http://www.wikipedia.com/");
+
+            RDFQuadruple mickeymouse
+                     = new RDFQuadruple(
+                     wd_context,
+                     new RDFResource("http://www.waltdisney.com/mickey_mouse"),
+                     RDFVocabulary.FOAF.AGE,
+                     new RDFTypedLiteral("85", RDFModelEnums.RDFDatatypes.XSD_INTEGER));
+
+            RDFQuadruple donalduck
+                     = new RDFQuadruple(
+                     wd_context,
+                     new RDFResource("http://www.waltdisney.com/donald_duck"),
+                     RDFVocabulary.FOAF.NAME,
+                     new RDFPlainLiteral("Donald Duck", "en"));
+
+            var wdStore = new RDFMemoryStore();
+
+            wdStore.AddQuadruple(mickeymouse);
+            wdStore.AddQuadruple(donalduck);
+
+            wdStore.RemoveQuadruplesByContext(wd_context);
+
+            Assert.AreEqual(0, wdStore.QuadruplesCount);
+        }
+
+        [TestMethod]
+        public void TestRDFQuadrupleDeleteBySubject()
+        {
+            var wd_context = new RDFContext("http://www.wikipedia.com/");
+            var subject_m = new RDFResource("http://www.waltdisney.com/mickey_mouse");
+
+            RDFQuadruple mickeymouse
+                     = new RDFQuadruple(
+                     wd_context,
+                     subject_m,
+                     RDFVocabulary.FOAF.AGE,
+                     new RDFTypedLiteral("85", RDFModelEnums.RDFDatatypes.XSD_INTEGER));
+
+            RDFQuadruple donalduck
+                     = new RDFQuadruple(
+                     wd_context,
+                     new RDFResource("http://www.waltdisney.com/donald_duck"),
+                     RDFVocabulary.FOAF.NAME,
+                     new RDFPlainLiteral("Donald Duck", "en"));
+
+            var wdStore = new RDFMemoryStore();
+
+            wdStore.AddQuadruple(mickeymouse);
+            wdStore.AddQuadruple(donalduck);
+
+            wdStore.RemoveQuadruplesBySubject(subject_m);
+
+            Assert.AreEqual(1, wdStore.QuadruplesCount);
+        }
+
+        [TestMethod]
+        public void TestRDFQuadrupleDeleteByObject()
+        {
+            var wd_context = new RDFContext("http://www.wikipedia.com/");
+            var subject_m = new RDFResource("http://www.waltdisney.com/mickey_mouse");
+            var subject_d = new RDFResource("http://www.waltdisney.com/donald_duck");
+            var object_d = new RDFPlainLiteral("Donald Duck", "en");
+
+            RDFQuadruple mickeymouse
+                     = new RDFQuadruple(
+                     wd_context,
+                     subject_m,
+                     RDFVocabulary.FOAF.AGE,
+                     new RDFTypedLiteral("85", RDFModelEnums.RDFDatatypes.XSD_INTEGER));
+
+            RDFQuadruple donalduck
+                     = new RDFQuadruple(
+                     wd_context,
+                     subject_d,
+                     RDFVocabulary.FOAF.NAME,
+                     object_d);
+
+            var wdStore = new RDFMemoryStore();
+
+            wdStore.AddQuadruple(mickeymouse);
+            wdStore.AddQuadruple(donalduck);
+
+            wdStore.RemoveQuadruplesByLiteral(object_d);
+
+            Assert.AreEqual(1, wdStore.QuadruplesCount);
+        }
+
+        [TestMethod]
+        public void TestRDFQuadrupleDeleteByPredicate()
+        {
+            var wd_context = new RDFContext("http://www.wikipedia.com/");
+            var subject_m = new RDFResource("http://www.waltdisney.com/mickey_mouse");
+            var subject_d = new RDFResource("http://www.waltdisney.com/donald_duck");
+            var object_d = new RDFPlainLiteral("Donald Duck", "en");
+
+            RDFQuadruple mickeymouse
+                     = new RDFQuadruple(
+                     wd_context,
+                     subject_m,
+                     RDFVocabulary.FOAF.AGE,
+                     new RDFTypedLiteral("85", RDFModelEnums.RDFDatatypes.XSD_INTEGER));
+
+            RDFQuadruple donalduck
+                     = new RDFQuadruple(
+                     wd_context,
+                     subject_d,
+                     RDFVocabulary.FOAF.NAME,
+                     object_d);
+
+            var wdStore = new RDFMemoryStore();
+
+            wdStore.AddQuadruple(mickeymouse);
+            wdStore.AddQuadruple(donalduck);
+
+            wdStore.RemoveQuadruplesByPredicate(RDFVocabulary.FOAF.NAME);
+
+            Assert.AreEqual(1, wdStore.QuadruplesCount);
+        }
+
+        [TestMethod]
+        public void TestRDFQuadrupleClear()
+        {
+            var wd_context = new RDFContext("http://www.wikipedia.com/");
+            var subject_m = new RDFResource("http://www.waltdisney.com/mickey_mouse");
+            var subject_d = new RDFResource("http://www.waltdisney.com/donald_duck");
+            var object_d = new RDFPlainLiteral("Donald Duck", "en");
+
+            RDFQuadruple mickeymouse
+                     = new RDFQuadruple(
+                     wd_context,
+                     subject_m,
+                     RDFVocabulary.FOAF.AGE,
+                     new RDFTypedLiteral("85", RDFModelEnums.RDFDatatypes.XSD_INTEGER));
+
+            RDFQuadruple donalduck
+                     = new RDFQuadruple(
+                     wd_context,
+                     subject_d,
+                     RDFVocabulary.FOAF.NAME,
+                     object_d);
+
+            var wdStore = new RDFMemoryStore();
+
+            wdStore.AddQuadruple(mickeymouse);
+            wdStore.AddQuadruple(donalduck);
+
+            wdStore.ClearQuadruples();
+
+            Assert.AreEqual(0, wdStore.QuadruplesCount);
+        }
+
+        [TestMethod]
         public void TestRDFQuadrupleSearchBySubject()
         {
             RDFQuadruple mickeymouse
