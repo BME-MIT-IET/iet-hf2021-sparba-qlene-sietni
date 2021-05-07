@@ -2,25 +2,31 @@
 using BenchmarkDotNet.Order;
 using RDFSharp.Model;
 using RDFSharp.Query;
-using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace RDFSharp.BenchmarkDotNet
 {
     [MemoryDiagnoser]
-    [Orderer(SummaryOrderPolicy.FastestToSlowest)]
+    [Orderer(SummaryOrderPolicy.Declared)]
     [RankColumn]
     public class Benchmark
     {
-        RDFGraph graph = new RDFGraph();
+        RDFGraph graph1 = new RDFGraph();
+        RDFGraph graph2 = new RDFGraph();
 
         [Benchmark]
-        public void FillGraphWithSome()
+        [Arguments(1)]
+        public void FillGraphWithSome(int init)
         {
-            for(int i = 0; i < 100; i++)
+            RDFGraph graph = init switch
+            {
+                1 => graph1,
+                2 => graph2,
+                _ => graph1,
+            };
+
+            for (int i = 0; i < 100 * init; i += init)
             {
                 var r = new RDFResource(RDFVocabulary.RDF.BASE_URI + "resource" + i);
                 graph.AddTriple(new RDFTriple(r, RDFVocabulary.RDF.TYPE, new RDFResource(RDFVocabulary.RDF.BASE_URI + "resource")));
@@ -29,9 +35,9 @@ namespace RDFSharp.BenchmarkDotNet
         }
 
         [GlobalSetup(Target = nameof(QuerySearchByNamePredicate))]
-        public void GlobalSetup()
+        public void SetupSearchByName()
         {
-            FillGraphWithSome();
+            FillGraphWithSome(1);
         }
 
         [Benchmark]
@@ -46,25 +52,39 @@ namespace RDFSharp.BenchmarkDotNet
             var patternGroup = new RDFPatternGroup("pg")
                 .AddPattern(new RDFPattern(subj, pred, obj))
                 .AddFilter(regFilter);
-            var result = new RDFSelectQuery().AddPatternGroup(patternGroup).AddProjectionVariable(subj).ApplyToGraph(graph);
-/*            for (int i = 0; i < result.SelectResults.Rows.Count; i++)
-            {
-                Console.WriteLine("debug - query result: " + result.SelectResults.Rows[i].ItemArray[0].ToString());
-            }
-*/        
+            var result = new RDFSelectQuery().AddPatternGroup(patternGroup).AddProjectionVariable(subj).ApplyToGraph(graph1);
         }
+
+        private string[] stringArray = new string[]
+        {
+            "13",
+            "98",
+        };
 
         public IEnumerable<object> RemoveArgumentSource()
         {
-            yield return "13";
-            yield return "98";
+            foreach (string s in stringArray)
+            {
+                yield return s;
+            }
         }
 
         [Benchmark]
         [ArgumentsSource(nameof(RemoveArgumentSource))]
         public void RemoveTripleByNamePredicate(string argString)
         {
-            graph.RemoveTriplesByLiteral(new RDFPlainLiteral(argString));
+            graph1.RemoveTriplesByLiteral(new RDFPlainLiteral(argString));
         }
+
+        [GlobalCleanup(Target = nameof(RemoveTripleByNamePredicate))]
+        public void CleanupRemoveByName()
+        {
+            foreach (string argString in RemoveArgumentSource()) {
+                var r = new RDFResource(RDFVocabulary.RDF.BASE_URI + "resource" + argString);
+                graph1.AddTriple(new RDFTriple(r, new RDFResource(RDFVocabulary.RDF.BASE_URI + "name"), new RDFPlainLiteral(argString)));
+                System.Console.WriteLine("cleanup - restored: " + argString);
+            }
+        }
+
     }
 }
