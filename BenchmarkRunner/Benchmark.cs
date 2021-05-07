@@ -51,6 +51,20 @@ namespace RDFSharp.BenchmarkDotNet
             {
                 Console.WriteLine("debug - query result: " + result.SelectResults.Rows[i].ItemArray[0].ToString());
             }
-*/        }
+*/        
+        }
+
+        public IEnumerable<object> RemoveArgumentSource()
+        {
+            yield return "13";
+            yield return "98";
+        }
+
+        [Benchmark]
+        [ArgumentsSource(nameof(RemoveArgumentSource))]
+        public void RemoveTripleByNamePredicate(string argString)
+        {
+            graph.RemoveTriplesByLiteral(new RDFPlainLiteral(argString));
+        }
     }
 }
