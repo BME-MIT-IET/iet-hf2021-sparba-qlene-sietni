@@ -34,11 +34,9 @@ namespace RDFSharp.BenchmarkDotNet
             FillGraphWithSome();
         }
 
-        [Params("2", @"\b2")]
-        public string regexString { get; set; }
-
         [Benchmark]
-        public void QuerySearchByNamePredicate()
+        [Arguments("2", @"\b2")]
+        public void QuerySearchByNamePredicate(string regexString)
         {
             var subj = new RDFVariable("s");
             var pred = new RDFResource(RDFVocabulary.RDF.BASE_URI + "name");
