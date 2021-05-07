@@ -16,7 +16,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Marco De Salvo")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Lightweight and friendly .NET library for modeling Semantic Web applications")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.23.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.23.0+1805589bcf6bb46b9f283c48395e15d878e59da5")]
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.23.0")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.23.0+b431285c65e3ab6ad8ce1c567563b1b48547419b")]
+>>>>>>> Stashed changes
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.23.0+b431285c65e3ab6ad8ce1c567563b1b48547419b")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("RDFSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RDFSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.23.0.0")]
