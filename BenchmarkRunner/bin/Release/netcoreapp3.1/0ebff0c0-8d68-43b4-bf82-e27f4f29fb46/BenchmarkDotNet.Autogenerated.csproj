@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ImportDirectoryBuildProps>false</ImportDirectoryBuildProps>
+    <ImportDirectoryBuildTargets>false</ImportDirectoryBuildTargets>
+    <AssemblyTitle>0ebff0c0-8d68-43b4-bf82-e27f4f29fb46</AssemblyTitle>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>0ebff0c0-8d68-43b4-bf82-e27f4f29fb46</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <OutputPath>bin\Release</OutputPath>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <UseSharedCompilation>false</UseSharedCompilation>
+    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
+    
+    <!-- we set LangVersion after  which might contain LangVersion copied from the benchmarks project -->
+    <LangVersion Condition="'$(LangVersion)' == '' Or '$(LangVersion)' &lt; '7.3'">latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="0ebff0c0-8d68-43b4-bf82-e27f4f29fb46.notcs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\BenchmarkRunner\BenchmarkRunner.csproj" />
+  </ItemGroup>
+  
+
+</Project>

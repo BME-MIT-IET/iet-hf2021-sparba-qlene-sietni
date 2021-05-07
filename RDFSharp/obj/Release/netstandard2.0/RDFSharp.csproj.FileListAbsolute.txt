@@ -1,0 +1,11 @@
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Release\netstandard2.0\RDFSharp.xml
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Release\netstandard2.0\RDFSharp.deps.json
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Release\netstandard2.0\RDFSharp.dll
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\bin\Release\netstandard2.0\RDFSharp.pdb
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Release\netstandard2.0\RDFSharp.csprojAssemblyReference.cache
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Release\netstandard2.0\RDFSharp.AssemblyInfoInputs.cache
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Release\netstandard2.0\RDFSharp.AssemblyInfo.cs
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Release\netstandard2.0\RDFSharp.csproj.CoreCompileInputs.cache
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Release\netstandard2.0\RDFSharp.sourcelink.json
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Release\netstandard2.0\RDFSharp.dll
+F:\Users\Tamas\source\repos\BME-MIT-IET\iet-hf2021-sparba-qlene-sietni\RDFSharp\obj\Release\netstandard2.0\RDFSharp.pdb
