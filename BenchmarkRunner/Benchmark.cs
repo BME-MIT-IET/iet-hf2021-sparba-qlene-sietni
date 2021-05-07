@@ -34,13 +34,16 @@ namespace RDFSharp.BenchmarkDotNet
             FillGraphWithSome();
         }
 
+        [Params("2", @"\b2")]
+        public string regexString { get; set; }
+
         [Benchmark]
         public void QuerySearchByNamePredicate()
         {
             var subj = new RDFVariable("s");
             var pred = new RDFResource(RDFVocabulary.RDF.BASE_URI + "name");
             var obj = new RDFVariable("o");
-            var regFilter = new RDFRegexFilter(obj, new Regex("2"));
+            var regFilter = new RDFRegexFilter(obj, new Regex(regexString));
             var patternGroup = new RDFPatternGroup("pg")
                 .AddPattern(new RDFPattern(subj, pred, obj))
                 .AddFilter(regFilter);
