@@ -86,5 +86,26 @@ namespace RDFSharp.BenchmarkDotNet
             }
         }
 
+        [GlobalSetup(Target = nameof(IntersectWith))]
+        public void GlobalSetupIntersectWith()
+        {
+            FillGraphWithSome(2);
+        }
+
+        public IEnumerable<object[]> IntersectArgumentSource()
+        {
+            yield return new object[]
+            {
+                graph1,
+                graph2,
+            };
+        }
+
+        [Benchmark]
+        [ArgumentsSource(nameof(IntersectArgumentSource))]
+        public void IntersectWith(RDFGraph graph1, RDFGraph graph2)
+        {
+            graph1.IntersectWith(graph2);
+        }
     }
 }
