@@ -28,6 +28,27 @@ namespace RDFSharp.BenchmarkDotNet
             }
         }
 
+        [GlobalSetup(Target = nameof(QuerySearchByNamePredicate))]
+        public void GlobalSetup()
+        {
+            FillGraphWithSome();
+        }
 
+        [Benchmark]
+        public void QuerySearchByNamePredicate()
+        {
+            var subj = new RDFVariable("s");
+            var pred = new RDFResource(RDFVocabulary.RDF.BASE_URI + "name");
+            var obj = new RDFVariable("o");
+            var regFilter = new RDFRegexFilter(obj, new Regex("2"));
+            var patternGroup = new RDFPatternGroup("pg")
+                .AddPattern(new RDFPattern(subj, pred, obj))
+                .AddFilter(regFilter);
+            var result = new RDFSelectQuery().AddPatternGroup(patternGroup).AddProjectionVariable(subj).ApplyToGraph(graph);
+/*            for (int i = 0; i < result.SelectResults.Rows.Count; i++)
+            {
+                Console.WriteLine("debug - query result: " + result.SelectResults.Rows[i].ItemArray[0].ToString());
+            }
+*/        }
     }
 }
